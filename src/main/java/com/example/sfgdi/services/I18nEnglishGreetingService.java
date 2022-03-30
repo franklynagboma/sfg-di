@@ -6,7 +6,9 @@ package com.example.sfgdi.services;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Profile("EN")
+// default will post this as the default active bean when non is
+// assign on the application properties
+@Profile({"EN", "default"})
 @Service("i18nService")
 public class I18nEnglishGreetingService implements GreetingService{
 
